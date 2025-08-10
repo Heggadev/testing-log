@@ -1,0 +1,119 @@
+/* Reset sangat ringan */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --accent: #2b6ef6;
+  --muted: #6b7280;
+  --input-border: #e6e9ef;
+  --danger: #ef4444;
+}
+
+html,body {
+  height: 100%;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #eef2f9 70%);
+  color: #111827;
+}
+
+/* Layout tengah */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.08);
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+/* Title */
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* Form elements */
+.login-form { display: flex; flex-direction: column; gap: 12px; }
+
+.label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: #fafbff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(43,110,246,0.12);
+}
+
+/* Options row */
+.options {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.remember input { margin-right: 8px; transform: translateY(1px); }
+
+/* Button */
+.btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,var(--accent), #1e56d6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .08s, box-shadow .12s;
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:focus { outline: 3px solid rgba(43,110,246,0.18); }
+
+/* Signup text */
+.signup {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.signup a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+/* Small screens tweak */
+@media (max-width:420px){
+  .card { padding: 20px; border-radius: 10px; }
+  .title { font-size: 1.25rem; }
+}
